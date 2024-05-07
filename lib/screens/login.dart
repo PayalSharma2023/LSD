@@ -26,6 +26,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final screenWidth = MediaQuery.of(context).size.width;
     
     return Scaffold(
       body: Container(
@@ -42,11 +43,14 @@ class _LoginScreenState extends State<LoginScreen> {
               mainAxisSize: MainAxisSize.max,
               children: [
                
-                Image.asset("assets/images/image.png", height: 243, width: 291, fit: BoxFit.fitHeight,),
+                Image.asset("assets/images/image.png", 
+                height: 243, 
+                width: screenWidth * 0.8,
+                 fit: BoxFit.fitHeight,),
                 SizedBox(height: 15,),
                   Container(
                     height: 47,
-                    width: 320,
+                    width: screenWidth * 0.8,
                     padding: EdgeInsets.fromLTRB(10, 0,10, 0),
                     decoration: BoxDecoration(
                       color: Color.fromRGBO(255, 255, 255, 1),
@@ -75,7 +79,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
                   Container(
                     height: 47,
-                    width: 320,
+                    width: screenWidth * 0.8,
                     padding: EdgeInsets.fromLTRB(10, 0,10, 0),
                     decoration: BoxDecoration(
                       color: Color.fromRGBO(255, 255, 255, 1),
@@ -111,7 +115,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   GestureDetector(
                     onDoubleTap: navigateToForgetPassword,
                     child: Container(
-                      width: 320,
+                      width: screenWidth*0.8,
                       padding: EdgeInsets.only(left: 200),
                       child: Text("Forget Password",
                       style: TextStyle(
@@ -128,7 +132,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
                   Container(
                    // padding: EdgeInsets.fromLTRB(0, 0, 0, 4),
-                     width: 320,
+                     width: screenWidth*0.8,
                      height: 47,
                      child: ElevatedButton(
                     
